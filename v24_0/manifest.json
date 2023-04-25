@@ -1,0 +1,8 @@
+{
+    "PluginName": "FormIt-Plugin-Facade",
+    "PluginDescription": "Facade to access s3 plugin to connect FormIt and Forma",
+    "PluginType": "Panel",
+    "Panel": "PLUGINLOCATION/index.html",
+    "PanelIcon": "PLUGINLOCATION/assets/sync.png",
+    "Platforms": ["Windows"]
+}
