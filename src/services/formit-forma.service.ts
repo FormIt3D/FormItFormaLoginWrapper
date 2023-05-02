@@ -22,6 +22,14 @@ class FormaSaveService {
     {
       smRegionUrl = 'app.spacemakerai.com';
     }
+
+    //TODO update this to use new domain as soon as possible
+    // let smRegionUrl = 'app.autodeskforma.eu';
+    // if(region === 'us')
+    // {
+    //   smRegionUrl = 'app.autodeskforma.com';
+    // }
+
     if(fromWeb)
     {
       const baseUrl = `https://${smRegionUrl}/web-components/FormIt-Forma/index.html`;
