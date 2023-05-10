@@ -1,6 +1,6 @@
 {
     "PluginName": "FormIt-Forma",
-    "PluginDescription": "Connection between FormIt and Forma environment",
+    "PluginDescription": "Connection between FormIt and Forma environment. OpenStreetMap® data was used to generate some of the data in this plug-in. https://www.openstreetmap.org/copyright",
     "PluginType": "Panel",
     "Panel": "PLUGINLOCATION/index.html",
     "PanelIcon": "PLUGINLOCATION/assets/sync.png",
