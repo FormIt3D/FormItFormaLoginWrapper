@@ -1,5 +1,3 @@
-const MAIN_HISTORY_ID = 0;
-
 FormItPlugin = {};
 
 FormItPlugin.PluginLocation = "PLUGINLOCATION";
