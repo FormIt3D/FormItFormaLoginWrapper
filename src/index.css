@@ -31,16 +31,15 @@ h1.title {
 h3.title {
   font-size: 13px !important;
   font-family: Arial !important;
-  color: grey !important;
+  color: rgb(80, 80, 80) !important;
   font-weight:bold !important;
   margin-bottom: 0 !important;
   padding: 0px 10px 10px 10px !important;
+  width: 80%;
 }
 
-
-h4 {
-  font-size: 13px !important;
-  color: grey !important;
+#login-lbl {
+  margin-top: 10px;
 }
 
 #Login{
@@ -49,6 +48,9 @@ h4 {
 
 #MainControls, #AppControls{
   text-align: left;
+}
+
+#AppControls{
   border-top: solid 1px lightsteelblue;
 }
 
@@ -63,11 +65,56 @@ h4 {
 }
 
 #LoginControls button{
-  background-color: #4676a9;
+  background-color: rgb(88, 144, 228);
   color: white;
   width:100%;
+  font-weight: bold;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
 }
-
+  
 #LoginControls button i{
   margin-left: 10px;
+}
+
+#header-title {
+  display: flex;
+  flex-direction: row;
+}
+
+#region-selector {
+  display: flex;
+  flex-direction: row;
+}
+
+#lblExplanation {
+  padding: 20px 0px 0px 12px;
+  color: rgb(80, 80, 80);
+}
+
+#lblRegion {
+  padding: 15px 10px 0px 10px;
+  color: rgb(80, 80, 80);
+}
+
+.region {
+  margin-right: 10px;
+  padding: 15px 0px 0px 0px;
+  color: rgb(160, 160, 160);
+  font-weight:bold !important;
+  cursor: pointer;
+}
+
+.region:hover {
+  /* border-bottom: 3px solid rgb(155, 155, 155); */
+  color: dimgray;
+} 
+
+.chosen {
+  /* border-bottom: 3px solid #4676a9 !important; */
+  padding-bottom: 3px;
+  color: #4676a9 !important;
 }

@@ -11,8 +11,8 @@ export default defineConfig({
     outDir: './build',
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'index.html')
-      },
+        main: resolve(__dirname, 'index.html')
+      }
     }
   },
   plugins: [
@@ -24,27 +24,31 @@ export default defineConfig({
   },
   server: process.env.DEV_SERVER && {
     open: true,
-    host: "local.spacemaker.ai",
-    port: 3002,
+    host: "local.autodeskforma.eu",
+    port: 3001,
     https: {
       key: fs.readFileSync(`${os.homedir()}/.spacemaker-cli/server.pem`),
       cert: fs.readFileSync(`${os.homedir()}/.spacemaker-cli/cert.pem`),
     },
     proxy: {
       "/api": {
-        target: "https://app.spacemaker.ai/",
+        target: "https://app.autodeskforma.eu/",
         changeOrigin: true,
       },
       "/app": {
-        target: "https://app.spacemaker.ai/",
+        target: "https://app.autodeskforma.eu/",
         changeOrigin: true,
       },
       "/texture": {
-        target: "https://app.spacemaker.ai/",
+        target: "https://app.autodeskforma.eu/",
         changeOrigin: true,
       },
       "/web-components": {
-        target: "https://app.spacemaker.ai/",
+        target: "https://app.autodeskforma.eu/",
+        changeOrigin: true,
+      },
+      "/design-system": {
+        target: "https://app.autodeskforma.eu/",
         changeOrigin: true,
       }
     }

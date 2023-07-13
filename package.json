@@ -5,19 +5,15 @@
   "scripts": {
     "dev": "vite",
     "dev-proxy": "NODE_ENV=development DEV_SERVER=1 vite",
-    
     "build": "tsc && yarn delete && vite build",
-    "delete": "rimraf build && rimraf dist",
-
+    "delete": "rimraf build && rimraf dist/dev",
     "create_dist": "yarn prepare_version && cpx versions_prerelease.json dist && yarn prepare_dist && yarn copy_assets",
     "prepare_dist": "cpx versions.json dist && cpx manifest.json $npm_config_directory && cpx plugin_formit.js $npm_config_directory",
     "prepare_version": "cpx 'build/*' $npm_config_directory && cpx README.md dist",
     "copy_assets": "cpx 'src/assets/*' $npm_config_directory/assets && cpx 'build/assets/*' $npm_config_directory/assets && cpx 'src/Addins/*' $npm_config_directory",
     "replace_prerelease": "cpx 'src/Addins/PreRelease/*' $npm_config_directory",
-
-    "create_version": "npm run create_dist --directory=dist/v24_0",
-    "create_prerelease": "npm run create_dist --directory=dist/dev && npm run replace_prerelease --directory=dist/dev",
-
+    "create_version": "npm run create_dist --directory=dist/v24_1_0",
+    "create_prerelease": "npm run create_dist --directory=dist/dev",
     "deploy": "yarn build && yarn create_version && yarn create_prerelease && gh-pages -d dist"
   },
   "repository": {
@@ -26,17 +22,18 @@
   },
   "author": "Autodesk",
   "dependencies": {
+    "@spacemakerai/react-wc-wrapper": "^2.1.2",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "cpx": "^1.5.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "gh-pages": "^5.0.0",
-    "cpx": "^1.5.0",
     "rimraf": "^5.0.0"
   },
   "devDependencies": {
-    "vite": "^4.1.0",
-    "@vitejs/plugin-react": "^3.1.0"
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0"
   }
 }

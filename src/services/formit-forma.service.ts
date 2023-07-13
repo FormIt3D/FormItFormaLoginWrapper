@@ -25,7 +25,7 @@ class FormaSaveService {
     if(fromWeb)
     {
       const baseUrl = `https://${smRegionUrl}/web-components/FormIt-Forma/index.html`;
-      const returnUrl = `${baseUrl}?region=${region}`;
+      const returnUrl = `${baseUrl}?args=region%3B${region}%3BcallingUrl%3B${window.location}`;
       loginDialog = window.open(`https://${smRegionUrl}/auth/login?rd=${returnUrl}`, "_blank", "width= 500px, height=500px");
       let id = setInterval(() => {
         // try to retrieve cookie each 1s, and close popup in case of success
@@ -45,7 +45,8 @@ class FormaSaveService {
       //TODO for local debug, replace the first line with the following
       //const baseUrl = "https://local.spacemaker.ai:3001";
       const baseUrl = `https://${smRegionUrl}/web-components/FormIt-Forma/index.html`;
-      const returnUrl = `${baseUrl}?region=${region}`;
+      // to allow user to get back to login, we have to pass the calling url as argument on top of the region one
+      const returnUrl = `${baseUrl}?args=region%3B${region}%3BcallingUrl%3B${window.location}`;
       window.location.replace(`https://${smRegionUrl}/auth/login?rd=${returnUrl}`);
     }
   }

@@ -367,6 +367,11 @@
   resolved "https://npm.autodesk.com/artifactory/api/npm/autodesk-npm-virtual/@remix-run/router/-/router-1.5.0.tgz#57618e57942a5f0131374a9fdb0167e25a117fdc"
   integrity sha512-bkUDCp8o1MvFO+qxkODcbhSqRa6P2GXgrGZVpt0dCXNW2HCSCqYI0ZoAqEOSAjRWmmlKcYgFvN4B4S+zo/f8kg==
 
+"@spacemakerai/react-wc-wrapper@^2.1.2":
+  version "2.1.2"
+  resolved "https://npm.pkg.github.com/download/@spacemakerai/react-wc-wrapper/2.1.2/10b8e3d6fa7be87763613a1b4c8b34c32e1361ec#10b8e3d6fa7be87763613a1b4c8b34c32e1361ec"
+  integrity sha512-UrA0LGnCLaSL6OAsNqzeOuPFWMIFwLvOJoN/2vh1A/+W05eZS5rUN8s+TLctzCkvnhZKOvCDfRSZQXmaOBfBog==
+
 "@types/prop-types@*":
   version "15.7.5"
   resolved "https://npm.autodesk.com/artifactory/api/npm/autodesk-npm-virtual/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
